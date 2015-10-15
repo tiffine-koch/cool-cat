@@ -35,6 +35,7 @@ var rand2 = randNumber();
 var cat1header = document.getElementById("cat1header");
 var car2header = document.getElementById("cat2header");
 
+
 function displayPhotos() {
 	get1.src = listCreateCat[rand1].path;
 	get2.src = listCreateCat[rand2].path;
@@ -54,7 +55,23 @@ var randPhoto = function (){
   	}
 };
 
-displayPhotos(); // when page loads
+displayPhotos(); // when aspage loads
+randPhoto();
+getLocal(data);
+
+function createLocal(data) {
+	var jSonData = JSON.stringify(data);
+	localStorage.setItem('dataKey', jSonData);
+	//var storedData = localStorage.getItem
+};
+
+function getLocal(dataKey) {
+	var storedData = localStorage.getItem(dataKey);
+	var parseData = JSON.parse(storedData);
+		if (parseData != null) {
+		return localStorage.getItem('dataKey'); 
+		}
+};
 
 get1.addEventListener('click', function() {
 	console.log(cat1header.innerHTML + " was clicked");
@@ -72,6 +89,8 @@ get1.addEventListener('click', function() {
 	}
 	myChart.update();
 	randPhoto();
+	createLocal(data);
+	getLocal(data);
 	now.style.visibility = 'visible';
 });
 
@@ -90,7 +109,9 @@ get2.addEventListener('click', function() {
 		}
 	}
 	myChart.update();
-	randPhoto()
+	randPhoto();
+	createLocal(data);
+	getLocal(data);
 	now.style.visibility = 'visible';
 });
 
