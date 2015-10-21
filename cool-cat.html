@@ -1,21 +1,31 @@
 <html5>
 <head>
 	<title>Cool Cat Challenge</title>
-	<link href= "cool-cat.css" type="text.css" rel="stylesheet">
+	<link href="cool-cat.css" type="text.css" rel="stylesheet"/>
+	<link href="skeleton.css" type="text.css" rel="stylesheet" />
+	<link href="normalize.css" type="text.css" rel="stylesheet" />
 </head>
-<body>
-	<h1>Cool Cat Challenge: Only one kitty will reign supreme</h1>
-	<img src= "cat-img/king_cat.jpg" width="300" />
-	
-	<h2 id="cat1header"></h2>
-		<article>
-		<img id="randomImage1" />
-		</article>
-	<h2 id="cat2header"></h2>
-		<article>
-		<img id="randomImage2" />
-		</article>	
 
+<body>
+	<h2>Cool Cat Challenge: Only One Kitty Will Reign Supreme</h2>
+	
+	<div class = "container">
+		
+		<div class = "row">
+			<div class = "one-half column feature">
+			<h4 id="cat1header" class="one"></h4>
+			<article class="one">
+			<img id="randomImage1" />
+			</article>
+			</div>
+			<div class = "one-half column feature">	
+			<h4 id="cat2header" class="one"></h4>
+			<article class="one">
+			<img id="randomImage2" />
+			</article>	
+			</div>
+		</div>
+	</div>	
 	<p>
 	<button id="new-cat" type="click" value="">Next Round!</button>
 	</p> 
