@@ -55,7 +55,7 @@ var randPhoto = function (){
   	}
 };
 
-displayPhotos(); // when aspage loads
+displayPhotos(); // when page loads
 randPhoto();
 getLocal(data);
 
